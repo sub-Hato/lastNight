@@ -12,9 +12,9 @@
     <<silently>>
         <<set _fuck = "fuck">>
     <</silently>>\
-    I like to <<link _fuck "boy">><</link>>
+    I like to <<link _fuck "game">><</link>>
 
-:: boy
+:: game
     A quizical looking person stares back at you from a mirror. They are neither ugly nor particularly remarkible, although you might be biased since it is your face.
 
     You have hazel (radio) colored eyes, brunette (r) hair, and would most definately fall over without your glasses (r).
@@ -22,3 +22,9 @@
     Oh, and you're a boy (r).
     <<set $gender to "boy">>
     <<link "continue" $gender>><</link>>
+
+    :: girl
+        hehe.
+
+    :: boy
+        hehe dangly.
