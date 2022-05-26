@@ -50,6 +50,37 @@
     <<link "continue" "characterCreator2">><</link>>
 
 :: characterCreator2
-    <<if $gender is "Male">>
-    
+    <<if $bio is "male">>
+    Dick length:
+    /*choices 2-8 inch*/
+
+    <<elseif $bio is "female">>
+    Boob Size:
+    /*A-DD */
+
+    <<elseif $bio is "All">>
+    Dick length:
+    /*choices 2-8 inch*/
+    Boob Size:
+    /*A-DD */
     <</if>>
+
+    Disposition:
+    //This will make the product better at one thing but will cost extra.//
+
+    Well built
+    //Body of a gym rat.//
+
+    Smart
+    //Well suited to learning.//
+
+    Carismatic
+    //Quite a smooth talker.//
+
+    Fighter
+    //May not be buffer then average but definately knows how to fight.//
+
+    Experienced
+    //Has skill in the pleasures of the flesh//
+
+    
