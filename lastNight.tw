@@ -26,5 +26,5 @@
     <<set $gender to "boy">>
     <<link "continue" "characterCreator2">><</link>>
 
-    :: characterCreator1
-        girl 1
+:: characterCreator2
+    girl 1
