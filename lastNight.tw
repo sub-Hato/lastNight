@@ -24,7 +24,7 @@
     <<link "continue" $gender>><</link>>
 
     :: girl
-        hehe.
+        girl 1
 
     :: boy
-        hehe dangly.
+        boy 1
