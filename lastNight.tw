@@ -1,8 +1,5 @@
-:: test
-    idk if this works
-
 :: StoryTitle
-    Last-Night
+    Last Night
  
 :: StoryData
 {
@@ -12,19 +9,47 @@
 }
 
 :: Start
-    <<silently>>
-        <<set _fuck = "fuck">>
-    <</silently>>\
-    I like to <<link _fuck "characterCreator1">><</link>>
+    Welcome,
+    I hope you have fun with the game I've made
+    By clicking accept you are agreeing that you are legally allowed to view adult content in your region.
+
+    <<link "Accept" "characterCreator1">><</link>>
 
 :: characterCreator1
-    A quizical looking person stares back at you from a mirror. They are neither ugly nor particularly remarkible, although you might be biased since it is your face.
+    Hello!
+    Welcome to Createch your one stop shop for creating your perfect human.
+    Note Createch and it's subsidiaries are ''not''' responsible for the use of a human created with their technology. Any harm caused or civil rights violeted are solely the responsibility of the creator or the product itself.
+   
+   Now please customize your creation below.
+    
+    Biology:
+    //This only specifies the sexual organs of the product.//
+    Male,
+    Female,
+    All
 
-    You have hazel (radio) colored eyes, brunette (r) hair, and would most definately fall over without your glasses (r).
+    Gender:
+    //This will decide the pronouns and self understanding of the product.//
+    Male,
+    Female,
+    None
 
-    Oh, and you're a boy (r).
-    <<set $gender to "boy">>
+    Hair color:
+    //Select the natural hair color of the product.//
+    Ginger,
+    Blond,
+    Brunette
+
+    Hair length:
+    Bald,
+    Very short,
+    Shortish,
+    Chin length,
+    Long
+
     <<link "continue" "characterCreator2">><</link>>
 
 :: characterCreator2
-    girl 1
+    <<if $gender is "Male">>
+    
+    <</if>>
