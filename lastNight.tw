@@ -12,22 +12,16 @@
     <<silently>>
         <<set _fuck = "fuck">>
     <</silently>>\
-    I like to <<link _fuck "game">><</link>>
+    I like to <<link _fuck "characterCreator1">><</link>>
 
-:: game
+:: characterCreator1
     A quizical looking person stares back at you from a mirror. They are neither ugly nor particularly remarkible, although you might be biased since it is your face.
 
     You have hazel (radio) colored eyes, brunette (r) hair, and would most definately fall over without your glasses (r).
 
     Oh, and you're a boy (r).
     <<set $gender to "boy">>
-    <<link "continue" $gender>><</link>>
+    <<link "continue" "characterCreator2">><</link>>
 
-    :: girl
+    :: characterCreator1
         girl 1
-
-    :: boy
-        boy 1
-
-    :: next
-      gamer
