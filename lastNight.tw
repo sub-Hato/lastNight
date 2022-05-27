@@ -24,47 +24,79 @@
     
     Biology:
     //This only specifies the sexual organs of the product.//
-    Male,
-    Female,
-    All
+    <label><<radiobutton "$bio" "male">>Male,</label>
+    <label><<radiobutton "$bio" "female">>Female,</label>
+    <label><<radiobutton "$bio" "all">>All</label>
 
     Gender:
     //This will decide the pronouns and self understanding of the product.//
-    <<radiobutton "$gender" defaultValue>>
-    Male,
-    Female,
-    None
+    <label><<radiobutton "$gender" "male">>Male,</label>
+    <label><<radiobutton "$gender" "female">>Female,</label>
+    <label><<radiobutton "$gender" "none">>None</label>
 
     <<print $gender>>
+
+    Skin tone:
+    <label><<radiobutton "$skin" "brown">>Brown,</label>
+    <label><<radiobutton "$skin" "beige">>Beige,</label>
+    <label><<radiobutton "$skin" "white">>White</label>
+
     Hair color:
     //Select the natural hair color of the product.//
-    Ginger,
-    Blond,
-    Brunette
+    <label><<radiobutton "$hairC" "giinger">>Ginger,</label>
+    <label><<radiobutton "$hairC" "blond">>Blond,</label>
+    <label><<radiobutton "$hairC" "brunette">>Brunette</label>
 
     Hair length:
-    Bald,
-    Very short,
-    Shortish,
-    Chin length,
-    Long
+    <label><<radiobutton "$hairL" "short">>Short,</label>
+    <label><<radiobutton "$hairL" "medium">>Medium,</label>
+    <label><<radiobutton "$hairL" "long">>Long</label>
 
     <<link "continue" "characterCreator2">><</link>>
 
 :: characterCreator2
     <<if $bio is "male">>
     Dick length:
-    /*choices 2-8 inch*/
+    <<cycle "$dLength">>
+        <<option "2\"" 2>>
+        <<option "3\"" 3>>
+        <<option "4\"" 4>>
+        <<option "5\"" 5>>
+        <<option "6\"" 6>>
+        <<option "7\"" 7>>
+        <<option "8\"" 8>>
+    <</cycle>>
 
     <<elseif $bio is "female">>
     Boob Size:
-    /*A-DD */
+    <<cycle "$dLength" once>>
+        <<option "A" "A">>
+        <<option "B" "B" selected>>
+        <<option "C" "C">>
+        <<option "D" "D">>
+        <<option "DD" "DD">>
+    <</cycle>>
 
     <<elseif $bio is "All">>
     Dick length:
-    /*choices 2-8 inch*/
+    <<cycle "$dLength" once>>
+        <<option "2\"" 2>>
+        <<option "3\"" 3>>
+        <<option "4\"" 4>>
+        <<option "5\"" 5 selected>>
+        <<option "6\"" 6>>
+        <<option "7\"" 7>>
+        <<option "8\"" 8>>
+    <</cycle>>
+
     Boob Size:
-    /*A-DD */
+    <<cycle "$dLength" once>>
+        <<option "A" "A">>
+        <<option "B" "B" selected>>
+        <<option "C" "C">>
+        <<option "D" "D">>
+        <<option "DD" "DD">>
+    <</cycle>>
     <</if>>
 
     Disposition:
