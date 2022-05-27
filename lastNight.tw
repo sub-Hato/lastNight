@@ -30,10 +30,12 @@
 
     Gender:
     //This will decide the pronouns and self understanding of the product.//
+    <<radiobutton "$gender" defaultValue>>
     Male,
     Female,
     None
 
+    <<print $gender>>
     Hair color:
     //Select the natural hair color of the product.//
     Ginger,
