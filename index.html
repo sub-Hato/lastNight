@@ -112,42 +112,76 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
     
     Biology:
     //This only specifies the sexual organs of the product.//
-    Male,
-    Female,
-    All
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$bio&quot; &quot;male&quot;&gt;&gt;Male,&lt;/label&gt;
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$bio&quot; &quot;female&quot;&gt;&gt;Female,&lt;/label&gt;
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$bio&quot; &quot;all&quot;&gt;&gt;All&lt;/label&gt;
 
     Gender:
     //This will decide the pronouns and self understanding of the product.//
-    Male,
-    Female,
-    None
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$gender&quot; &quot;male&quot;&gt;&gt;Male,&lt;/label&gt;
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$gender&quot; &quot;female&quot;&gt;&gt;Female,&lt;/label&gt;
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$gender&quot; &quot;none&quot;&gt;&gt;None&lt;/label&gt;
+
+    &lt;&lt;print $gender&gt;&gt;
+
+    Skin tone:
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$skin&quot; &quot;brown&quot;&gt;&gt;Brown,&lt;/label&gt;
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$skin&quot; &quot;beige&quot;&gt;&gt;Beige,&lt;/label&gt;
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$skin&quot; &quot;white&quot;&gt;&gt;White&lt;/label&gt;
 
     Hair color:
     //Select the natural hair color of the product.//
-    Ginger,
-    Blond,
-    Brunette
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$hairC&quot; &quot;giinger&quot;&gt;&gt;Ginger,&lt;/label&gt;
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$hairC&quot; &quot;blond&quot;&gt;&gt;Blond,&lt;/label&gt;
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$hairC&quot; &quot;brunette&quot;&gt;&gt;Brunette&lt;/label&gt;
 
     Hair length:
-    Bald,
-    Very short,
-    Shortish,
-    Chin length,
-    Long
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$hairL&quot; &quot;short&quot;&gt;&gt;Short,&lt;/label&gt;
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$hairL&quot; &quot;medium&quot;&gt;&gt;Medium,&lt;/label&gt;
+    &lt;label&gt;&lt;&lt;radiobutton &quot;$hairL&quot; &quot;long&quot;&gt;&gt;Long&lt;/label&gt;
 
     &lt;&lt;link &quot;continue&quot; &quot;characterCreator2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="characterCreator2" tags="" position="350,100" size="100,100">&lt;&lt;if $bio is &quot;male&quot;&gt;&gt;
     Dick length:
-    /*choices 2-8 inch*/
+    &lt;&lt;cycle &quot;$dLength&quot;&gt;&gt;
+        &lt;&lt;option &quot;2\&quot;&quot; 2&gt;&gt;
+        &lt;&lt;option &quot;3\&quot;&quot; 3&gt;&gt;
+        &lt;&lt;option &quot;4\&quot;&quot; 4&gt;&gt;
+        &lt;&lt;option &quot;5\&quot;&quot; 5&gt;&gt;
+        &lt;&lt;option &quot;6\&quot;&quot; 6&gt;&gt;
+        &lt;&lt;option &quot;7\&quot;&quot; 7&gt;&gt;
+        &lt;&lt;option &quot;8\&quot;&quot; 8&gt;&gt;
+    &lt;&lt;/cycle&gt;&gt;
 
     &lt;&lt;elseif $bio is &quot;female&quot;&gt;&gt;
     Boob Size:
-    /*A-DD */
+    &lt;&lt;cycle &quot;$dLength&quot; once&gt;&gt;
+        &lt;&lt;option &quot;A&quot; &quot;A&quot;&gt;&gt;
+        &lt;&lt;option &quot;B&quot; &quot;B&quot; selected&gt;&gt;
+        &lt;&lt;option &quot;C&quot; &quot;C&quot;&gt;&gt;
+        &lt;&lt;option &quot;D&quot; &quot;D&quot;&gt;&gt;
+        &lt;&lt;option &quot;DD&quot; &quot;DD&quot;&gt;&gt;
+    &lt;&lt;/cycle&gt;&gt;
 
     &lt;&lt;elseif $bio is &quot;All&quot;&gt;&gt;
     Dick length:
-    /*choices 2-8 inch*/
+    &lt;&lt;cycle &quot;$dLength&quot; once&gt;&gt;
+        &lt;&lt;option &quot;2\&quot;&quot; 2&gt;&gt;
+        &lt;&lt;option &quot;3\&quot;&quot; 3&gt;&gt;
+        &lt;&lt;option &quot;4\&quot;&quot; 4&gt;&gt;
+        &lt;&lt;option &quot;5\&quot;&quot; 5 selected&gt;&gt;
+        &lt;&lt;option &quot;6\&quot;&quot; 6&gt;&gt;
+        &lt;&lt;option &quot;7\&quot;&quot; 7&gt;&gt;
+        &lt;&lt;option &quot;8\&quot;&quot; 8&gt;&gt;
+    &lt;&lt;/cycle&gt;&gt;
+
     Boob Size:
-    /*A-DD */
+    &lt;&lt;cycle &quot;$dLength&quot; once&gt;&gt;
+        &lt;&lt;option &quot;A&quot; &quot;A&quot;&gt;&gt;
+        &lt;&lt;option &quot;B&quot; &quot;B&quot; selected&gt;&gt;
+        &lt;&lt;option &quot;C&quot; &quot;C&quot;&gt;&gt;
+        &lt;&lt;option &quot;D&quot; &quot;D&quot;&gt;&gt;
+        &lt;&lt;option &quot;DD&quot; &quot;DD&quot;&gt;&gt;
+    &lt;&lt;/cycle&gt;&gt;
     &lt;&lt;/if&gt;&gt;
 
     Disposition:
